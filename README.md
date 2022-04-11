@@ -4,19 +4,19 @@ Backend AMZ|MP
 ##Checklist
 ----
 
-- [ ] Login
-- [ ] Cadastrar cliente
-- [ ] Listar cliente
-- [ ] Editar cliente
-- [ ] Apagar cliente
+- [ ] Autenticação
+- [ ] Cadastro de clientes
+- [ ] Listagem de clientes
+- [ ] Edição de clientes
+- [ ] Remoção de clientes
 
-##Ferramentas utilizadas
+## Ferramentas utilizadas
 ----
 
 - Framework CodeIgniter 4;
 - Postman;
 
-##Instruções
+## Instruções
 ----
 
 
