@@ -19,10 +19,10 @@ Ferramentas utilizadas
 Instruções
 ----
 
-0. Criar um banco de dados;
-0. Configurar o arquivo app/config/Database de acordo;
+1. Criar um banco de dados;
+2. Configurar o arquivo app/config/Database de acordo;
 0. Executar o seguinte comando na pasta raíz do projeto para que as tabelas sejam criadas:
-    > php spark migrate
+    1. > php spark migrate
 
 Rotas
 ----
