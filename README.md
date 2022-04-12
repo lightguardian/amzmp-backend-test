@@ -23,7 +23,7 @@ Instruções
 2. Configurar o arquivo app/config/Database de acordo;
 0. Executar o seguinte comando na pasta raíz do projeto para que as tabelas sejam criadas:
 ```php 
-php spark migrate
+  php spark migrate
 ```
 Rotas
 ----
