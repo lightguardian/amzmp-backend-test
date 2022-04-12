@@ -22,8 +22,9 @@ Instruções
 1. Criar um banco de dados;
 2. Configurar o arquivo app/config/Database de acordo;
 0. Executar o seguinte comando na pasta raíz do projeto para que as tabelas sejam criadas:
-    - ```bash 
-        php spark migrate```
+```bash 
+php spark migrate
+```
 Rotas
 ----
 ### Clientes
