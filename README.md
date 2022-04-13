@@ -40,7 +40,7 @@ URL   |  Tipo | Ação
 ### Usuários
 
 URL   |  Tipo | Ação
-:--------- | ------:
+:---------| -------- | ------:
 /cadastro | POST | Cadastrar um usuário
 /entrar | POST | Realizar o login na plataforma
 
