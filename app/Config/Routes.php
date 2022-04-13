@@ -33,6 +33,15 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->get('clientes', 'CustomerController::index');
+$routes->get('clientes/(:num)', 'CustomerController::show/$1');
+$routes->post('clientes', 'CustomerController::create');
+$routes->put('clientes/(:num)', 'CustomerController::update/$1');
+$routes->delete('clientes/(:num)', 'CustomerController::remove/$1');
+
+$routes->post('cadastro', 'UserController::create');
+$routes->post('entrar', 'UserController::login');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

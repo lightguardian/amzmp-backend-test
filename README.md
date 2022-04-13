@@ -5,10 +5,10 @@ Checklist
 ----
 
 - [ ] Autenticação
-- [ ] Cadastro de clientes
-- [ ] Listagem de clientes
-- [ ] Edição de clientes
-- [ ] Remoção de clientes
+- [x] Cadastro de clientes
+- [x] Listagem de clientes
+- [x] Edição de clientes
+- [x] Remoção de clientes
 
 Ferramentas utilizadas
 ----
@@ -35,6 +35,13 @@ URL   |  Tipo | Ação
 /clientes | POST | Cadastrar um cliente
 /clientes/{id} | PUT | Editar um cliente
 /clientes/{id} | DELETE | Excluir um cliente
+
+### Usuários
+
+URL   |  Tipo | Ação
+:--------- | ------:
+/cadastro | POST | Cadastrar um usuário
+/entrar | POST | Realizar o login na plataforma
 
 
 

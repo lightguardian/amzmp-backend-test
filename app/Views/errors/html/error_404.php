@@ -70,15 +70,13 @@
 </head>
 <body>
 	<div class="wrap">
-		<h1>404 - File Not Found</h1>
+		<h1>404 - Rota não encontrada</h1>
 
 		<p>
-			<?php if (! empty($message) && $message !== '(null)') : ?>
-				<?= nl2br(esc($message)) ?>
-			<?php else : ?>
-				Sorry! Cannot seem to find the page you were looking for.
-			<?php endif ?>
+			Por favor verifique as instruções do arquivo README.MD 
 		</p>
+		<br>
+		<p><a href="https://github.com/lightguardian/amzmp-backend-test#readme" target="_blank">Ir para página do Github que contém o README</a></p>
 	</div>
 </body>
 </html>
