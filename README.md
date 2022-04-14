@@ -34,7 +34,8 @@ Instruções
 
 Rotas
 ----
-<p>Um arquivo de coleções do postman foi enviado juntamente com o projeto na raiz da aplicação</p>
+<p>Um arquivo de coleções do postman foi enviado juntamente com o projeto na raiz da aplicação.</p>
+<p>Todas as rotas estão no arquivo Routes.php</p>
 
 ### Clientes
 
