@@ -34,7 +34,7 @@ Instruções
 
 Rotas
 ----
-<p>Um arquivo de coleções do postman foi enviado juntament com o projeto na raiz da aplicação</p>
+<p>Um arquivo de coleções do postman foi enviado juntamente com o projeto na raiz da aplicação</p>
 
 ### Clientes
 
