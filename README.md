@@ -26,7 +26,7 @@ Instruções
   php spark migrate
 ```
 - Criar um arquivo .env para definir as variáveis de ambiente:
-    0. Criar a variável **SECRET_KEY** e atribuir a ela uma chave(esta chave servirá para autenticação):
+    - Criar a variável **SECRET_KEY** e atribuir a ela uma chave(esta chave servirá para autenticação):
     ```php 
       # Exemplo
       SECRET_KEY = "sua_chave_secreta_aqui"
