@@ -39,7 +39,7 @@ Rotas
 ### Clientes
 
 **Atenção**
->  Todas as rotas de clientes necessitam de autenticação via Bearer Token, o Bearer Token que é gerado quando o usuário faz login no sistema
+>  Todas as rotas de clientes necessitam de autenticação via Bearer Token, este é gerado quando o usuário faz login no sistema
 
 URL   |  Tipo | Ação
 :--------- | ------- | ------:
