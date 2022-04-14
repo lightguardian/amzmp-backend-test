@@ -43,7 +43,7 @@ Rotas
 
 URL   |  Tipo | Ação
 :--------- | ------- | ------:
-/clientes | GET | Retornar todos os cliente
+/clientes | GET | Retornar todos os clientes
 /clientes/{id} | GET | Retornar somente um cliente
 /clientes | POST | Cadastrar um cliente
 /clientes/{id} | PUT | Editar um cliente
