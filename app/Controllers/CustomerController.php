@@ -10,15 +10,25 @@ class CustomerController extends ResourceController
     private $customer;
     private $userController;
     private $validation;
+    private $auth;
 
     public function __construct() 
     {
         $this->validation =  \Config\Services::validation();    
         $this->customer = new \App\Models\Customer();
+        $this->auth = new \App\Controllers\AuthController();
     }
 
     public function index() 
     {
+        if(!$this->auth->authenticate($this->request)) {
+            $this->response->setStatusCode(401);
+            return $this->response->setJson([
+                'status' => false, 
+                'message' => 'Não autorizado.'
+            ]);
+        }
+
         try {
             $data = $this->customer->findAll();
         } 
@@ -41,16 +51,26 @@ class CustomerController extends ResourceController
             'message' => 'Nenhum cliente encontrado.'
         ]);
         
+        
     }
 
     public function show($id = null) 
     {   
-        if($id === null) 
+        if(!$this->auth->authenticate($this->request)) {
+            $this->response->setStatusCode(401);
+            return $this->response->setJson([
+                'status' => false, 
+                'message' => 'Não autorizado.'
+            ]);
+        }
+
+        if($id === null) {
             $this->response->setStatusCode(404);
             return $this->response->setJson([
                 'status' => false,
                 'message' => 'Dados inválidos'
             ]);
+        }
 
         try {
             $data = $this->customer->find($id);
@@ -77,6 +97,13 @@ class CustomerController extends ResourceController
 
     public function create()
     {   
+        if(!$this->auth->authenticate($this->request)) {
+            $this->response->setStatusCode(401);
+            return $this->response->setJson([
+                'status' => false, 
+                'message' => 'Não autorizado.'
+            ]);
+        }
 
         $request = (array) $this->request->getJson();
 
@@ -109,6 +136,14 @@ class CustomerController extends ResourceController
 
     public function update($id = null)
     {   
+        if(!$this->auth->authenticate($this->request)) {
+            $this->response->setStatusCode(401);
+            return $this->response->setJson([
+                'status' => false, 
+                'message' => 'Não autorizado.'
+            ]);
+        }
+
         $request = (array) $this->request->getJson();
 
         $query = $this->customer->where('id', $id)->first();
@@ -126,7 +161,6 @@ class CustomerController extends ResourceController
             }
             catch (\Exception $e)
             {   
-                echo $e;
                 $this->response->setStatusCode(500);
                 return $this->response->setJson([
                     'status' => false,
@@ -143,6 +177,14 @@ class CustomerController extends ResourceController
     }
 
     public function remove($id = null) {
+        if(!$this->auth->authenticate($this->request)) {
+            $this->response->setStatusCode(401);
+            return $this->response->setJson([
+                'status' => false, 
+                'message' => 'Não autorizado.'
+            ]);
+        }
+
         try {
             if($this->customer->where('id', $id)->first()) {
                 $this->customer->delete($id);

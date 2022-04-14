@@ -53,9 +53,14 @@ class Validation
         'corporate_name' => 'permit_empty|min_length[3]',
     ];
 
-    public $UserCreate = [
+    public $userCreate = [
         'name' => 'required|min_length[3]',
         'email' => 'required|valid_email',
+        'password' => 'required'
+    ];
+
+    public $userLogin = [
+        'email' => 'required',
         'password' => 'required'
     ];
 

@@ -4,7 +4,7 @@ Backend AMZ|MP
 Checklist
 ----
 
-- [ ] Autenticação
+- [x] Autenticação
 - [x] Cadastro de clientes
 - [x] Listagem de clientes
 - [x] Edição de clientes
@@ -25,9 +25,21 @@ Instruções
 ```php 
   php spark migrate
 ```
+0. Criar um arquivo .env para definir as variáveis de ambiente:
+    0. Criar a variável **SECRET_KEY** e atribuir a ela uma chave(esta chave servirá para autenticação):
+    ```php 
+      \# Exemplo
+      SECRET_KEY = "sua_chave_secreta_aqui"
+    ```
+
 Rotas
 ----
+<p>Um arquivo de coleções do postman foi enviado juntament com o projeto na raiz da aplicação</p>
+
 ### Clientes
+
+**Atenção**
+>  Todas as rotas de clientes necessitam de autenticação via Bearer Token, o Bearer Token que é gerado quando o usuário faz login no sistema
 
 URL   |  Tipo | Ação
 :--------- | ------- | ------:
