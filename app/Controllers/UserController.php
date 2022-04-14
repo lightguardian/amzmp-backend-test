@@ -77,6 +77,7 @@ class UserController extends ResourceController
                 $token = $this->auth->giveToken();
 
                 $newdata = [
+                    'userId'    => $userData['id'],
                     'name'      => $userData['name'],
                     'email'     => $userData['email'],
                     'token'     => $token,

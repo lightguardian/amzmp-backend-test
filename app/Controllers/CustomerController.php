@@ -108,7 +108,6 @@ class CustomerController extends ResourceController
         $request = (array) $this->request->getJson();
 
         if ($this->validation->run($request,'fiscalCustomerCreate')) {
-
             try {
                 $this->customer->table('fiscal_customer')->insert($request);
                 $this->response->setStatusCode(202);
